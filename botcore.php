@@ -43,3 +43,32 @@ $bot_url = 'https://api.telegram.org/bot' . $bot_token;
         $first_name_poll = $input['poll_answer']['user']['first_name'];
         $last_name_poll = $input['poll_answer']['user']['last_name'];
         $username_poll = $input['poll_answer']['user']['username'];
+switch ($message){
+        case '/start':
+        break;
+        default:
+        break;
+}
+
+class sendtoteleg {
+
+            public function sendteleg($data, $chat_id, $type) {
+                $result = null;
+                $data['chat_id'] = $chat_id;
+                if (is_array($data)) {
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, $GLOBALS['bot_url'] . '/' . $type);
+                    curl_setopt($ch, CURLOPT_POST, count($data));
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+                    curl_setopt($ch,CURLOPT_RETURNTRANSFER, TRUE);
+                    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20);
+                    curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+                    $result = curl_exec($ch);
+                    curl_close($ch);
+                }
+              
+                return $result;
+            }
+
+        }
