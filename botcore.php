@@ -2,6 +2,7 @@
 #############################################################################
 #This is simple php telegram bot for beginners - by R00f from UZB. 2020 Juni#
 #############################################################################
+####       See example methods in - example.php file          ###############
 date_default_timezone_set('Asia/Tashkent');
 require_once ("db.php");
 //////////////////////////////// Token and Telegram API URL
@@ -88,8 +89,8 @@ switch ($message){
                 $stt->sendteleg($dataSend, $chat_id, "SendMessage");           
         break;
 }
-####################################### switch $message end ###########################################
-####################################### switch callback data ##########################################
+####################################### switch $message end ####################################################
+####################################### switch callback data - you can answer to callback data of buttons ######
 switch ($call_query_data) {
             case '/back':       //<-----------------------------------Back button 
                 static $count = 1;
