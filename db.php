@@ -2,18 +2,18 @@
 header('Content-type: text/html; charset=utf-8');
 date_default_timezone_set('Asia/Tashkent');
 ////////////Baza bilan bog'lanamiz
-require_once ("corebot.php");
+require_once ("botcore.php");
 
 class Database { 
 	private $db;
 	private $senda;
     public function __construct(){
     	$this->db = new mysqli("localhost","usernameDB","passwordDB","nameDB");
-    	$this->senda = new sendtoadmin();
+    	$this->senda = new sendtoteleg();
     	
     	if(mysqli_connect_errno()){
-    		$this->senda->sendadmin($data = ['text'=>"Error with DB:"
-    		. mysqli_connect_errno()], $chat_id, "sendMessage" );
+    		$this->senda->sendteleg($data = ['text'=>"Error with DB:"
+    		. mysqli_connect_errno()], $GLOBALS['admin_id'], "sendMessage" );
          	exit;
        	}
     }
