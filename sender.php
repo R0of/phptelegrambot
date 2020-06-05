@@ -1,6 +1,6 @@
 <?
 
-require_once ("corebot.php");
+require_once ("botcore.php");
 
 class sendtoteleg {
 
