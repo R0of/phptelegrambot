@@ -1,7 +1,7 @@
 <?
-######################################################################
-This is simple php telegram bot for beginners - by R00f from UZB. 2020 Juni
-######################################################################
+#############################################################################
+#This is simple php telegram bot for beginners - by R00f from UZB. 2020 Juni#
+#############################################################################
 $bot_token = "xxxxxxxxxxx"; // add your bots token
 $bot_url = 'https://api.telegram.org/bot' . $bot_token; 
 
