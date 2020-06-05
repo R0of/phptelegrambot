@@ -1,7 +1,7 @@
 <?php
 header('Content-type: text/html; charset=utf-8');
-date_default_timezone_set('Asia/Tashkent');
-////////////Baza bilan bog'lanamiz
+date_default_timezone_set('Asia/Tashkent');// Set yor timezone
+////////////connect With Mysqli
 require_once ("botcore.php");
 
 class Database { 
@@ -18,7 +18,7 @@ class Database {
        	}
     }
     public function isRegistered($user_id) {
-        $query = "SELECT * FROM user WHERE user_id = $user_id";
+        $query = "SELECT * FROM `user` WHERE user_id = $user_id";
         $result = $this->db->query($query);
         $num_results = $result->num_rows;
         if ($num_results>0) {
@@ -29,7 +29,7 @@ class Database {
     }
     public function register($user_id,$username,$first_name,$last_name) {
     	$date = date("Y-m-d H:i:s");
-        $stmt = $this->db->prepare("INSERT INTO user ( user_id,username,first_name,last_name,created) 
+        $stmt = $this->db->prepare("INSERT INTO `user` ( user_id,username,first_name,last_name,created) 
         VALUES (?,?,?,?,?)");
         $stmt->bind_param("sssss",$user_id,$username,$first_name,$last_name,$date); 
         $result = $stmt->execute();
