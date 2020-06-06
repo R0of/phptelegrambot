@@ -1,5 +1,5 @@
 # phptelegrambot
-This is simple telegram bot for anyone
+This is simple telegram bot for anyone.
 How to install:
 - Create Database and import SQL.sql file
 - Copy all files to your root directory
