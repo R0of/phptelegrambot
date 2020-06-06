@@ -5,6 +5,6 @@ How to install:
 - Copy all files to your root directory
 - Edit botcore.php - add your bots token, admin_id and channel_id etc.
 - Enable SSL to your domain
-- Set Webhook to botcore.php and it working now
+- Set Webhook to botcore.php and it working now.
 Additionally you can add more methods to your bot - for more info see example.php file
 Good Luck!
