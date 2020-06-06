@@ -108,6 +108,7 @@ switch ($call_query_data) {
                 ];
                 $stt->sendteleg($dataSend, $chat_id_call, "answerCallbackQuery"); // show alert info
                 break;
+}
 ####################################### switch callback end ###########################################
 class sendtoteleg {
 
