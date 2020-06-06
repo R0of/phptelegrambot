@@ -66,7 +66,7 @@ if (isset($user_id_poll)){
 ################################### here you cann pass any inline keyboards ################################################
 $button_back = ['text' => "\xE2\xAC\x85 Back", 'callback_data' => '/back'];
 $button_channel = ['text' => "\xF0\x9F\x93\xA2 Go to channel", 'url' => 'https://t.me/'.$channel_id];
-$keyboard_buttons = [[$button_channel][$button_back]]; 
+$keyboard_buttons = [[$button_channel],[$button_back]]; 
 $replyMarkup = json_encode(["inline_keyboard" => $keyboard_buttons]);
 ######################################## keyboards end #####################################################################
 ############################# switch for incoming messages by user - you can add here cases for your bot commands ########## 
