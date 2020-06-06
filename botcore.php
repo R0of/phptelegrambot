@@ -93,9 +93,8 @@ switch ($message){
 ####################################### switch callback data - you can answer to callback data of buttons ######
 switch ($call_query_data) {
             case '/back':       //<-----------------------------------Back button 
-                static $count = 1;
-                $dataSend = [
-                    'text' => "<b>You pressed button: </b>".$count++." times!",
+                   $dataSend = [
+                    'text' => $first_name."<b> You pressed button!</b>",
                     'message_id' => $message_id_call,
                     'reply_markup' => $replyMarkup,
                     'parse_mode' => "HTML",
