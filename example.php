@@ -2,7 +2,7 @@
 ##################### simple edit and add it to botcore.php file to needed switch cases.
 
 ############################ ///////////////////// Send message to all members //////////////// ######################################
- default: ///// <-- this is default case of switch ($message) if you use this feature add one more default case to witch($reply_to_message_text) ####
+ default: # <-- this is default case of switch ($message) if you use this feature add one more default case to witch($reply_to_message_text) ####
             switch($reply_to_message_text) {
              case 'Message to all users:':////// there is force_reply method
              respondOK();  // see 68~91 row for more details of respondOK() function
@@ -49,7 +49,7 @@
       ######################################## End of send to all method ####################################
       #######################################################################################################
       ############################ check if user is a member of channel and grant acces to any feature of bot
-      function getmemberstatus($chat_id,$channel_id){
+      function getmemberstatus($chat_id,"@".$channel_id){
               $data = ['chat_id'=>$channel_id,'user_id'=>$chat_id];
               $isuser = $GLOBALS['stt']->sendteleg($data,$chat_id,'getChatMember');
               $decoded = json_decode($isuser);
