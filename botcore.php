@@ -94,7 +94,7 @@ switch ($message){
 switch ($call_query_data) {
             case '/back':       //<-----------------------------------Back button 
                    $dataSend = [
-                    'text' => $first_name."<b> You pressed button!</b>",
+                    'text' => $first_name_call."<b> You pressed button!</b>",
                     'message_id' => $message_id_call,
                     'reply_markup' => $replyMarkup,
                     'parse_mode' => "HTML",
